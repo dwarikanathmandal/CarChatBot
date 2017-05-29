@@ -1,17 +1,19 @@
 language: node_js
 node_js:
-  - "6.9"
-
-branches:
-  only:
-    - master
-
-before_script: 
-  - npm install -g @angular/cli
-
+  - "4.1"
+# hack until webpack peerDependencies are resolved
+#script:
+#  - npm run ci
+#  - bash ./.travis-deploy.sh
+os: windows
+install:
+  - npm --version
 script:
-  - ng build --prod
-
+  - npm --version
+after_script:
+  - npm i
+  - npm run ci
+  - bash ./.travis-deploy.sh
 deploy:
   provider: bluemixcloudfoundry
   skip_cleanup: true
