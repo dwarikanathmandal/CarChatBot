@@ -5,6 +5,7 @@ node_js:
 #script:
 #  - npm run ci
 #  - bash ./.travis-deploy.sh
+os: windows
 install:
   - npm --version
 script:
