@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "4.1"
+  - "6"
 # hack until webpack peerDependencies are resolved
 #script:
 #  - npm run ci
